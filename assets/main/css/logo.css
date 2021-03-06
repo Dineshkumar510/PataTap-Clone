@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+body{
+	text-align:center;
+	background: #fff;
+}
+div{display:block;position:absolute}
+
+.container{
+	background: #fff;
+	width:400px;
+	height:320px;
+	top:30%;
+	left:50%;
+	transform:translate(-50%,-50%)
+	}
+
+h1{
+	background: #fff;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	display:flex;
+	font-family:'Titan One',cursive;
+	font-size:90px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center
+	}
+
+h1 span{width:100%;
+	position:relative;
+}
+
+h1 span:before{
+	background:linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	content:"";
+	mix-blend-mode:screen
+	}
+
+[class*="blobs"]
+	{mix-blend-mode:color;animation:blobs 15s ease-in-out infinite alternate}
+
+.blobs_1{
+	background:#ff1493;
+	width:60px;
+	height:60px;
+	top:90px;
+	left:210px
+	}
+
+.blobs_2{
+	background:#ff4500;
+	width:80px;
+	height:80px;
+	top:155px;
+	left:230px
+	}
+
+.blobs_3{
+	background:#00ff00;
+	width:60px;
+	height:60px;
+	top:145px;
+	left:20px
+	}
+
+.blobs_4{
+	background:#ff0000;
+	width:100px;
+	height:100px;
+	top:115px;
+	left:100px
+	}
+
+.blobs_5{
+	background:#ffff00;
+	width:50px;
+	height:50px;
+	top:55px;
+	left:70px
+	}
+
+.blobs_6{
+	background:#00ffff;
+	width:60px;
+	height:60px;
+	top:220px;
+	left:55px
+	}
+
+.blobs_7{
+	background:#ff8c00;
+	width:50px;
+	height:50px;
+	top:210px;
+	left:180px
+	}
+
+@keyframes blobs{
+	0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
+	10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
+	20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
+	30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
+	40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
+	50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
+	60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
+	70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
+	80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
+	90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
+	100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
+	}
+  
+	#button1{
+		bottom: 37%;
+		left: 45%;
+		margin: 0;
+		position: absolute;
+	}
+	.glow-on-hover {
+		width: 120px;
+		height: 50px;
+		border: none;
+		outline: none;
+		color: #fff;
+		background: #6a82fb;
+		cursor: pointer;
+		position: relative;
+		z-index: 0;
+		border-radius: 30px;
+	}
+	
+	.glow-on-hover:before {
+		content: '';
+		background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		position: absolute;
+		top: -2px;
+		left:-2px;
+		background-size: 400%;
+		z-index: -1;
+		filter: blur(5px);
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		animation: glowing 20s linear infinite;
+		opacity: 0;
+		transition: opacity .3s ease-in-out;
+		border-radius: 30px;
+	}
+	
+	.glow-on-hover:active {
+		color: #6a82fb;
+	}
+	
+	.glow-on-hover:active:after {
+		background: transparent;
+	}
+	
+	.glow-on-hover:hover:before {
+		opacity: 1;
+	}
+	
+	.glow-on-hover:after {
+		z-index: -1;
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #ba6eb7;
+		left: 0;
+		top: 0;
+		border-radius: 30px;
+	}
+	
+	@keyframes glowing {
+		0% { background-position: 0 0; }
+		50% { background-position: 400% 0; }
+		100% { background-position: 0 0; }
+	}
